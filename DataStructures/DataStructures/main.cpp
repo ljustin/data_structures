@@ -1,4 +1,5 @@
 #include <iostream>
+#include "IntArray.h"
 
 using namespace std;
 
@@ -23,6 +24,15 @@ using namespace std;
 int main(int argc, char** argv)
 {
     cout << "Hello World!" << endl;
+
+    JDS::IntArray iArr(3);
+    cout << iArr;
+
+    iArr[0] = 1;
+    iArr[1] = 2;
+
+    cout << iArr;
+
 
     system("pause");
     return 0;
