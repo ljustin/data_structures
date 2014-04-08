@@ -33,6 +33,9 @@ int main(int argc, char** argv)
 
     cout << iArr;
 
+    JDS::IntArray iArrCopy(iArr);
+    cout << iArrCopy;
+
 
     system("pause");
     return 0;

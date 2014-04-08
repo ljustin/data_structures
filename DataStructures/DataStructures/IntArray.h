@@ -11,7 +11,7 @@ namespace JDS
     {
     public:
         IntArray(size_t size, int init_value = 0);
-
+        IntArray(const IntArray& rhs);
         int& operator[](size_t index);
 
         ~IntArray();
