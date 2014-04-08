@@ -6,7 +6,7 @@ namespace JDS
     {
         _arr = new int[_size];
 
-        for (int i = 0; i < size; i++)
+        for (size_t i = 0; i < size; i++)
             _arr[i] = init_value;
     }
 
@@ -16,7 +16,7 @@ namespace JDS
         _arr = new int[rhs._size];
         _size = rhs._size;
 
-        for (int i = 0; i < _size; i++)
+        for (size_t i = 0; i < _size; i++)
         {
             _arr[i] = rhs._arr[i];
         }
@@ -38,7 +38,7 @@ namespace JDS
     {
         out << "[ ";
 
-        for (int i = 0; i < iArr._size - 1; i++)
+        for (size_t i = 0; i < iArr._size - 1; i++)
         {
             out << iArr[i] << ", ";
         }
