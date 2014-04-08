@@ -19,3 +19,19 @@ JDS::IntArray::~IntArray()
     delete[] _arr;
 }
 
+namespace JDS
+{
+    std::ostream& operator<< (std::ostream& out, JDS::IntArray& iArr)
+    {
+        out << "[ ";
+
+        for (int i = 0; i < iArr._size - 1; i++)
+        {
+            out << iArr[i] << ", ";
+        }
+
+        out << iArr[iArr._size - 1] << " ] " << std::endl;
+
+        return out;
+    }
+}

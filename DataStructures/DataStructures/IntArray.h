@@ -16,19 +16,7 @@ namespace JDS
 
         ~IntArray();
 
-        friend std::ostream& operator<< (std::ostream& out, JDS::IntArray& iArr)
-        {
-            out << "[ ";
-
-            for (int i = 0; i < iArr._size - 1; i++)
-            {
-                out << iArr[i] << ", ";
-            }
-
-            out << iArr[iArr._size - 1] << " ] " << std::endl;
-
-            return out;
-        }
+        friend std::ostream& operator<< (std::ostream& out, IntArray& iArr);
 
     private:
         int* _arr;
