@@ -1,5 +1,6 @@
 #include <iostream>
 #include "IntArray.h"
+#include "MyQueue.h"
 
 using namespace std;
 
@@ -36,6 +37,16 @@ int main(int argc, char** argv)
     JDS::IntArray iArrCopy(iArr);
     cout << iArrCopy;
 
+    MyQueuePtr mq = mq_create_my_queue(5);
+    mq_enqueue(mq, 1);
+    mq_enqueue(mq, 2);
+    mq_enqueue(mq, 3);
+
+    int dequeued = 0;
+    mq_dequeue(mq, &dequeued);
+    mq_dequeue(mq, &dequeued);
+    mq_dequeue(mq, &dequeued);
+    mq_dequeue(mq, &dequeued);
 
     system("pause");
     return 0;
